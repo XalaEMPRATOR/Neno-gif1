@@ -12,9 +12,8 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`=help`, { type:"LISTENING" })
-  console.log("${client.user.tag}")
-});
+ client.user.setActivity(`Type: n/help | Server ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
+      }, (5000));
 
 const log = message => {
   console.log(` ${message}`);
