@@ -10,7 +10,9 @@ const embed = new Discord.MessageEmbed()
 .setColor('RANDOM') 
 .setThumbnail(message.author.avatarURL({dynamic: "true"}))
 .setFooter(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
-.setAuthor(`Gif Help`)
+.setAuthor(`Gif Help
+
+PREFIX [ n/]`)
 .setDescription(`
 **Info Commands**
 \`avatar\` - \`about\` - \`ping\`
@@ -23,7 +25,7 @@ const embed = new Discord.MessageEmbed()
 \`emoji\`
 
 **Links**
-**[Invite](https://discord.com/oauth2/authorize?client_id=806840212608909344&permissions=70346817&scope=bot) - [Server Support](https://discord.gg/jcs4XwcExv)**
+**[Invite](https://discord.com/api/oauth2/authorize?client_id=829379781812158504&permissions=8&scope=bot) - [Server Support](https://discord.gg/fU4AGb45vF)**
 `)
     
 message.channel.send({embed});
@@ -38,6 +40,7 @@ permLevel: 0
 
 exports.help = {
   name: 'help',
+  cooldown: 10,
   description: 'rexuss',
   usage: 'h'
 };
